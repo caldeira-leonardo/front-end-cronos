@@ -37,14 +37,14 @@ irá abrir um servidor na porta http://localhost:3001 que será nosso banco de d
 
 No projeto foram utilizadas as seguintes ferramentas:
 
-- [Atomic:] [React.js](https://reactjs.org/) - Biblioteca para criar interfaces de usuários
-- [Atomic:] [Material UI](https://mui.com/material-ui/getting-started/) - Biblioteca que ajuda na implementação do design do google
-- [Atomic:] [Redux & Redux-tollkit](https://redux.js.org/introduction/getting-started) - Biblioteca para gerenciamento de estados
-- [Atomic:] [axios](https://axios-http.com/ptbr/docs/intro) - Biblioteca utilizada para a comunicação entre Frontend e Backend
-- [Atomic:] [json-server](https://www.npmjs.com/package/json-server) - Biblioteca utilizada para simulação do backend
-- [Atomic:] [react-hook-form](https://react-hook-form.com/docs) - Biblioteca utilizado para manipulaçao de formulários
-- [Atomic:] [react-router-dom](https://reactrouter.com/en/main/start/tutorial) - Biblioteca utilizada para manuseio das rotas existentes na aplicação
-- [Atomic:] [typescript](https://www.typescriptlang.org/docs/) - Superconjunto sintático estrito de JavaScript e adiciona tipagem estática opcional à linguagem.
+- [React.js](https://reactjs.org/) - Biblioteca para criar interfaces de usuários
+- [Material UI](https://mui.com/material-ui/getting-started/) - Biblioteca que ajuda na implementação do design do google
+- [Redux & Redux-tollkit](https://redux.js.org/introduction/getting-started) - Biblioteca para gerenciamento de estados
+- [axios](https://axios-http.com/ptbr/docs/intro) - Biblioteca utilizada para a comunicação entre Frontend e Backend
+- [json-server](https://www.npmjs.com/package/json-server) - Biblioteca utilizada para simulação do backend
+- [react-hook-form](https://react-hook-form.com/docs) - Biblioteca utilizado para manipulaçao de formulários
+- [react-router-dom](https://reactrouter.com/en/main/start/tutorial) - Biblioteca utilizada para manuseio das rotas existentes na aplicação
+- [typescript](https://www.typescriptlang.org/docs/) - Superconjunto sintático estrito de JavaScript e adiciona tipagem estática opcional à linguagem.
 
 Foi escolhido React.js por ser uma biblioteca que conseuge abrangir todo o escopo do projeto além de ser amplamente utilizada na criação de interfaces de usuários, o Material UI foi utilizado para facilitar o design da aplicação
 já que a biblioteca possui uma variedade muito grande de componentes que podem ser utilizados. Redux & Redux-tollkit
