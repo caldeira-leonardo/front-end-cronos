@@ -50,11 +50,6 @@ const Home = () => {
     setIsOpen("");
   };
 
-  useEffect(() => {
-    console.log('["remove"].includes(isOpen)', ["remove"].includes(isOpen)); // remove logs
-    console.log("isOpen", isOpen); //TODO remove log
-  }, [isOpen]);
-
   return (
     <S.Wrapper>
       <S.TextContent>
