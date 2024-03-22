@@ -23,17 +23,6 @@
       "payer_address_complement": ""
     },
     {
-      "id": "300",
-      "payer_name": "Maria",
-      "payer_address": "Machado",
-      "payer_address_state": "mg",
-      "payer_address_zipcode": "29000-000",
-      "payer_address_neighbordhood": "centro",
-      "payer_address_addressName": "av. brasil",
-      "payer_address_number": "01",
-      "payer_address_complement": ""
-    },
-    {
       "id": "400",
       "payer_name": "josé",
       "payer_address": "presidente",
@@ -71,7 +60,10 @@
     {
       "id": "1",
       "name": "Motociclistas",
-      "tags": ["primeira", "segunda"],
+      "tags": [
+        "primeira",
+        "segunda"
+      ],
       "owner": "Leonardo",
       "items": {
         "100": {
@@ -96,14 +88,17 @@
         }
       },
       "settings": {
-        "showMode": true,
-        "defaultMessage": "Seja bem vindo"
+        "option1": true,
+        "option3": true
       }
     },
     {
       "id": "1",
       "name": "Pilotos",
-      "tags": ["terceira", "quarta"],
+      "tags": [
+        "terceira",
+        "quarta"
+      ],
       "owner": "Pedro",
       "items": {
         "300": {
@@ -128,8 +123,8 @@
         }
       },
       "settings": {
-        "showMode": true,
-        "defaultMessage": "Seja bem vindo"
+        "option1": true,
+        "option3": true
       }
     }
   ],
@@ -208,7 +203,10 @@
         {
           "id": "1",
           "name": "Motociclistas",
-          "tags": ["primeira", "segunda"],
+          "tags": [
+            "primeira",
+            "segunda"
+          ],
           "owner": "leonardo",
           "items": {
             "100": {
@@ -233,14 +231,17 @@
             }
           },
           "settings": {
-            "showMode": true,
-            "defaultMessage": "Seja bem vindo"
+            "option1": true,
+            "option3": true
           }
         },
         {
           "id": "2",
           "name": "Pilotos",
-          "tags": ["terceira", "quarta"],
+          "tags": [
+            "terceira",
+            "quarta"
+          ],
           "owner": "leonardo",
           "items": {
             "300": {
@@ -265,8 +266,8 @@
             }
           },
           "settings": {
-            "showMode": true,
-            "defaultMessage": "Seja bem vindo"
+            "option1": true,
+            "option3": true
           }
         }
       ]
@@ -277,7 +278,10 @@
         {
           "id": "1",
           "name": "Motociclistas",
-          "tags": ["primeira", "segunda"],
+          "tags": [
+            "primeira",
+            "segunda"
+          ],
           "owner": "pedro",
           "items": {
             "100": {
@@ -302,14 +306,17 @@
             }
           },
           "settings": {
-            "showMode": true,
-            "defaultMessage": "Seja bem vindo"
+            "option1": true,
+            "option3": true
           }
         },
         {
           "id": "2",
           "name": "Pilotos",
-          "tags": ["terceira", "quarta"],
+          "tags": [
+            "terceira",
+            "quarta"
+          ],
           "owner": "Pedro",
           "items": {
             "300": {
@@ -334,8 +341,8 @@
             }
           },
           "settings": {
-            "showMode": true,
-            "defaultMessage": "Seja bem vindo"
+            "option1": true,
+            "option3": true
           }
         }
       ]

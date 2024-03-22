@@ -12,6 +12,8 @@ export interface IGroupProps {
 }
 
 export interface IGroupSettingsProps {
-  showMode?: boolean;
-  defaultMessage?: string;
+  option1?: boolean;
+  option2?: boolean;
+  option3?: boolean;
+  option4?: boolean;
 }

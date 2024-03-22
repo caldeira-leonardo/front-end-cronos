@@ -21,7 +21,7 @@ const Home = () => {
   const getGroups = useCallback(async () => {
     try {
       const ownerId = 1;
-      await groupService.search(ownerId);
+      await groupService.search(ownerId.toString());
     } catch (e) {
       console.log("getGroups", e);
     } finally {

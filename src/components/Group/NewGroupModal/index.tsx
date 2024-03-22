@@ -11,8 +11,7 @@ import {
   Typography,
 } from "@mui/material";
 import { IGroupProps } from "types/group";
-import { itemsMoked } from "services/items";
-import { mockedTags, settingsOptions } from "utils/mocked";
+import { itemsMoked, mockedTags, settingsOptions } from "utils/mocked";
 import { useForm } from "react-hook-form";
 import { IPayerProps } from "types/payer";
 import groupService from "services/groups";
@@ -36,18 +35,20 @@ const NewGroupModal = ({
   selectedGroup,
 }: INewGroupModalProps) => {
   const [settings, setSettings] = useState({
-    option1: false,
-    option2: false,
-    option3: false,
-    option4: false,
+    option1: !!selectedGroup?.settings["option1"] ?? false,
+    option2: !!selectedGroup?.settings["option2"] ?? false,
+    option3: !!selectedGroup?.settings["option3"] ?? false,
+    option4: !!selectedGroup?.settings["option4"] ?? false,
   });
 
   const { register, handleSubmit, setValue, reset } = useForm<IFormValuesProps>(
     {
       defaultValues: {
-        name: "",
-        tags: [],
-        items: [],
+        name: selectedGroup?.name ?? "",
+        tags: selectedGroup?.tags ?? [],
+        items: selectedGroup?.items
+          ? Object.values(selectedGroup?.items).map((itemValue) => itemValue)
+          : [],
       },
     }
   );
@@ -60,7 +61,7 @@ const NewGroupModal = ({
   };
 
   const submitByAction = async (data: IFormValuesProps) => {
-    const ownderId = 1; // pegando por parametro nas variaveis globais
+    const ownderId = 1; // como se estivesse pegando por parametro nas variaveis globais
 
     const formatedItems: { [key: string]: IPayerProps } = {};
     Object.values(data.items).forEach((key) => {
@@ -77,18 +78,24 @@ const NewGroupModal = ({
       owner: ownderId,
     };
 
+    resetForm();
+
     try {
       await groupService.create(formatedData);
     } catch (e) {
       console.log("error submitByAction", e);
     } finally {
-      reset();
-      handleClose();
+      resetForm();
     }
   };
 
+  const resetForm = () => {
+    reset();
+    handleClose();
+  };
+
   return (
-    <Modal isOpen={isOpen} handleClose={handleClose}>
+    <Modal isOpen={isOpen} handleClose={resetForm}>
       <S.Typography variant="h5">{`${
         selectedGroup?.id ? "Edição" : "Criação"
       } de grupo`}</S.Typography>
@@ -116,7 +123,13 @@ const NewGroupModal = ({
             return (
               <FormControlLabel
                 key={option.key}
-                control={<Switch name={option.key} onChange={handleChange} />}
+                control={
+                  <Switch
+                    name={option.key}
+                    onChange={handleChange}
+                    checked={!!settings[option.key as keyof typeof settings]}
+                  />
+                }
                 label={option.label}
               />
             );

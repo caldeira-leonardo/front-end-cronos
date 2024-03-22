@@ -18,7 +18,7 @@ const groupService = {
     const url = `/`;
     await baseURL.post(url, data, headers);
   },
-  search: async (groupId: number) => {
+  search: async (groupId: string) => {
     const url = `/${groupId}`;
     await baseURL.get(url, headers);
   },

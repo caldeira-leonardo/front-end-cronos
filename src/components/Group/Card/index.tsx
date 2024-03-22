@@ -8,6 +8,7 @@ import {
 } from "@mui/icons-material";
 import { Chip, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
+import { forwardRef } from "react";
 
 interface IGroupCardProps {
   group: IGroupProps;
@@ -15,11 +16,14 @@ interface IGroupCardProps {
   handleEdiT(): void;
 }
 
-const GroupCard = ({ group, handleRemove, handleEdiT }: IGroupCardProps) => {
+const GroupCard = (
+  { group, handleRemove, handleEdiT }: IGroupCardProps,
+  ref: any
+) => {
   const { id, name, tags } = group;
 
   return (
-    <S.Wrapper>
+    <S.Wrapper ref={ref}>
       <S.Content>
         <GradeRoundedIcon color="warning" fontSize="large" />
         <S.Texts>
@@ -44,4 +48,4 @@ const GroupCard = ({ group, handleRemove, handleEdiT }: IGroupCardProps) => {
   );
 };
 
-export default GroupCard;
+export default forwardRef(GroupCard);
