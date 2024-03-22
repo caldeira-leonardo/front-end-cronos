@@ -5,6 +5,8 @@ import reportWebVitals from "./reportWebVitals";
 import { AppRoutes } from "./routes";
 import { Provider } from "react-redux";
 import store from "./store";
+import { ThemeProvider } from "@emotion/react";
+import theme from "theme";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -12,7 +14,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <AppRoutes />
+      <ThemeProvider theme={theme}>
+        <AppRoutes />
+      </ThemeProvider>
     </Provider>
   </React.StrictMode>
 );

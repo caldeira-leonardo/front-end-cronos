@@ -8,7 +8,7 @@ interface IGroupProps {
 const Group = ({ children }: IGroupProps) => {
   return (
     <div>
-      <Modal />
+      <Modal>aqui</Modal>
     </div>
   );
 };
