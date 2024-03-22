@@ -52,3 +52,17 @@ foram escolhidos pois possuem um poder de manuseio de estado extremamente algo, 
 Para a integração entre Frontend e Backend foi utilizado o axios por ser uma biblioteca de facil utilização e como não há um backend para a aplicação foi escolhido o json-server para simular esse backend. Para o manuseio das rotas foi utilizado o react-router-dom pois possui muitas funcionalidades interessantes, como aninhamento de rotas, validação de permissões, além de ser de facil manuseio. react-hook-form foi utilizado para a manipulação dos formulários pois também tem uma gama grande de funcionalidades e por ultimo foi utilizado o typescript para principalmente validar erros de sintaxe em tempo de desenvolvimento e não com a aplicação já sendo executada.
 
 ## Estrutura das pastas do projeto
+
+- [public](./public)
+- [src](./src) - Raiz do projeto
+  - [@types](./src/@types) - Typagens de modulos
+  - [assets](./src/assets) - Imagens da aplicação
+  - [common](./src/common) - Arquivos comuns da aplicação
+  - [components](./src/components) - Componentes reutilizaveis da aplicação
+  - [pages](./src/pages) - Paginas da aplicação
+  - [services](./src/services) - Funções que conectam Frontend e Backend
+  - [store](./src/store) - Vatiaveis de estado globais da aplicação
+    - [reducers](./src/store/reducers/) - Manipulação de cada estado global
+  - [theme](./src/theme) - Tema da aplicação
+  - [types](./src/types) - Typagem da aplicação
+  - [utils](./src/utils) - Funcionalidades uteis na aplicação
