@@ -53,16 +53,16 @@ Para a integração entre Frontend e Backend foi utilizado o axios por ser uma b
 
 ## Estrutura das pastas do projeto
 
-- [public](./public)
-- [src](./src) - Raiz do projeto
-  - [@types](./src/@types) - Typagens de modulos
-  - [assets](./src/assets) - Imagens da aplicação
-  - [common](./src/common) - Arquivos comuns da aplicação
-  - [components](./src/components) - Componentes reutilizaveis da aplicação
-  - [pages](./src/pages) - Paginas da aplicação
-  - [services](./src/services) - Funções que conectam Frontend e Backend
-  - [store](./src/store) - Vatiaveis de estado globais da aplicação
-    - [reducers](./src/store/reducers/) - Manipulação de cada estado global
-  - [theme](./src/theme) - Tema da aplicação
-  - [types](./src/types) - Typagem da aplicação
-  - [utils](./src/utils) - Funcionalidades uteis na aplicação
+* [public](./public)
+* [src](./src) - Raiz do projeto
+  * [@types](./src/@types) - Typagens de modulos
+  * [assets](./src/assets) - Imagens da aplicação
+  * [common](./src/common) - Arquivos comuns da aplicação
+  * [components](./src/components) - Componentes reutilizaveis da aplicação
+  * [pages](./src/pages) - Paginas da aplicação
+  * [services](./src/services) - Funções que conectam Frontend e Backend
+  * [store](./src/store) - Vatiaveis de estado globais da aplicação
+    * [reducers](./src/store/reducers/) - Manipulação de cada estado global
+  * [theme](./src/theme) - Tema da aplicação
+  * [types](./src/types) - Typagem da aplicação
+  * [utils](./src/utils) - Funcionalidades uteis na aplicação
