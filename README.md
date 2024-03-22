@@ -37,19 +37,17 @@ irá abrir um servidor na porta http://localhost:3001 que será nosso banco de d
 
 No projeto foram utilizadas as seguintes ferramentas:
 
-<ul>
-    <li>[React.js](https://reactjs.org/) - Biblioteca para criar interfaces de usuários</li>
-    <li>[Material UI](https://mui.com/material-ui/getting-started/) - Biblioteca que ajuda na implementação do design do google</li>
-    <li>[Redux &  Redux-tollkit](https://redux.js.org/introduction/getting-started) - Biblioteca para gerenciamento de estados</li>
-    <li>[axios](https://axios-http.com/ptbr/docs/intro) - Biblioteca utilizada para a comunicação entre Frontend e Backend</li>
-    <li>[json-server](https://www.npmjs.com/package/json-server) - Biblioteca utilizada para simulação do backend</li>
-    <li>[react-hook-form](https://react-hook-form.com/docs) - Biblioteca utilizado para manipulaçao de formulários</li>
-    <li>[react-router-dom](https://reactrouter.com/en/main/start/tutorial) - Biblioteca utilizada para manuseio das rotas existentes na aplicação</li>
-    <li>[typescript](https://www.typescriptlang.org/docs/) - Superconjunto sintático estrito de JavaScript e adiciona tipagem estática opcional à linguagem.</li>
-</ul>
+- [Atomic:] [React.js](https://reactjs.org/) - Biblioteca para criar interfaces de usuários
+- [Atomic:] [Material UI](https://mui.com/material-ui/getting-started/) - Biblioteca que ajuda na implementação do design do google
+- [Atomic:] [Redux & Redux-tollkit](https://redux.js.org/introduction/getting-started) - Biblioteca para gerenciamento de estados
+- [Atomic:] [axios](https://axios-http.com/ptbr/docs/intro) - Biblioteca utilizada para a comunicação entre Frontend e Backend
+- [Atomic:] [json-server](https://www.npmjs.com/package/json-server) - Biblioteca utilizada para simulação do backend
+- [Atomic:] [react-hook-form](https://react-hook-form.com/docs) - Biblioteca utilizado para manipulaçao de formulários
+- [Atomic:] [react-router-dom](https://reactrouter.com/en/main/start/tutorial) - Biblioteca utilizada para manuseio das rotas existentes na aplicação
+- [Atomic:] [typescript](https://www.typescriptlang.org/docs/) - Superconjunto sintático estrito de JavaScript e adiciona tipagem estática opcional à linguagem.
 
 Foi escolhido React.js por ser uma biblioteca que conseuge abrangir todo o escopo do projeto além de ser amplamente utilizada na criação de interfaces de usuários, o Material UI foi utilizado para facilitar o design da aplicação
-já que a biblioteca possui uma variedade muito grande de componentes que podem ser utilizados. Redux &  Redux-tollkit
+já que a biblioteca possui uma variedade muito grande de componentes que podem ser utilizados. Redux & Redux-tollkit
 foram escolhidos pois possuem um poder de manuseio de estado extremamente algo, possibilitando a utilização do redux Saga com o escalonamento do projeto.
 Para a integração entre Frontend e Backend foi utilizado o axios por ser uma biblioteca de facil utilização e como não há um backend para a aplicação foi escolhido o json-server para simular esse backend. Para o manuseio das rotas foi utilizado o react-router-dom pois possui muitas funcionalidades interessantes, como aninhamento de rotas, validação de permissões, além de ser de facil manuseio. react-hook-form foi utilizado para a manipulação dos formulários pois também tem uma gama grande de funcionalidades e por ultimo foi utilizado o typescript para principalmente validar erros de sintaxe em tempo de desenvolvimento e não com a aplicação já sendo executada.
 
