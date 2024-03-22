@@ -5,60 +5,89 @@ import groupService from "services/groups";
 import { useDispatch, useSelector } from "react-redux";
 import { IStoreProps } from "store";
 import { removeGroup, updateGroup } from "store/reducers/groups";
-import GroupCard from "components/GroupCard";
 import ConfirmationModal from "components/Material/ConfirmationModal";
 import { IGroupProps } from "types/group";
+import GroupCard from "components/Group/Card";
+import NewGroupModal from "components/Group/NewGroupModal";
+import { groupReturn } from "utils/mocked";
 
-interface IHomeProps {
-  children?: React.ReactNode;
-}
-
-const Home = ({ children }: IHomeProps) => {
+const Home = () => {
   const groups = useSelector((state: IStoreProps) => state.groups);
   const dispatch = useDispatch();
 
   const [selectedGroup, setSelectedGroup] = useState<IGroupProps | null>(null);
+  const [isOpen, setIsOpen] = useState("");
 
   const getGroups = useCallback(async () => {
-    //read-me com motivo de não ter try/catch
-    const resp = await groupService.search(1);
-
-    dispatch(updateGroup(resp));
+    try {
+      const ownerId = 1;
+      await groupService.search(ownerId);
+    } catch (e) {
+      console.log("getGroups", e);
+    } finally {
+      dispatch(updateGroup(groupReturn));
+    }
   }, [dispatch]);
 
   const handleRemoveGroup = async () => {
-    await groupService.remove(selectedGroup?.id);
+    try {
+      await groupService.remove(selectedGroup?.id);
+    } catch (e) {
+      console.log("handleRemoveGroup", e);
+    } finally {
+      if (selectedGroup?.id) dispatch(removeGroup(selectedGroup?.id));
 
-    if (selectedGroup?.id) dispatch(removeGroup(selectedGroup?.id));
-
-    setSelectedGroup(null);
+      handleResetSelection();
+    }
   };
 
   useEffect(() => {
     getGroups();
   }, [getGroups]);
 
+  const handleResetSelection = () => {
+    setSelectedGroup(null);
+    setIsOpen("");
+  };
+
+  useEffect(() => {
+    console.log('["remove"].includes(isOpen)', ["remove"].includes(isOpen)); // remove logs
+    console.log("isOpen", isOpen); //TODO remove log
+  }, [isOpen]);
+
   return (
     <S.Wrapper>
       <S.TextContent>
         <Typography variant="h5">Grupos:</Typography>
-        <Button>Novo Grupo</Button>
+        <Button onClick={() => setIsOpen("create")}>Novo Grupo</Button>
       </S.TextContent>
       <S.Cards>
         {groups?.map((group) => (
           <GroupCard
             key={group.id}
             group={group}
-            handleRemove={() => setSelectedGroup(group)}
+            handleRemove={() => {
+              setSelectedGroup(group);
+              setIsOpen("remove");
+            }}
+            handleEdiT={() => {
+              setSelectedGroup(group);
+              setIsOpen("edit");
+            }}
           />
         ))}
       </S.Cards>
       <ConfirmationModal
-        isOpen={!!selectedGroup?.id}
+        isOpen={["remove"].includes(isOpen)}
         headerText="Exclusão de grupo"
         confirmationText={`Você irá excluir o grupo "${selectedGroup?.name}"`}
-        handleClose={() => setSelectedGroup(null)}
+        handleClose={handleResetSelection}
         handleConfirm={handleRemoveGroup}
+      />
+      <NewGroupModal
+        isOpen={["create", "edit"].includes(isOpen)}
+        handleClose={handleResetSelection}
+        selectedGroup={selectedGroup}
       />
     </S.Wrapper>
   );

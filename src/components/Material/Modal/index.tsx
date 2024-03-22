@@ -1,16 +1,16 @@
 import * as React from "react";
-import Button from "@mui/material/Button";
 import * as S from "./Modal.style";
 
-const Modal = ({ children }: { children: React.ReactNode }) => {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+interface IModalProps {
+  isOpen: boolean;
+  handleClose(): void;
+  children: React.ReactNode;
+}
 
+const Modal = ({ children, handleClose, isOpen }: IModalProps) => {
   return (
     <div>
-      <Button onClick={handleOpen}>Open modal</Button>
-      <S.MaterialModal open={open} onClose={handleClose}>
+      <S.MaterialModal open={isOpen} onClose={handleClose}>
         <S.ModalWrapper>{children}</S.ModalWrapper>
       </S.MaterialModal>
     </div>

@@ -1,5 +1,5 @@
 import { IGroupProps } from "types/group";
-import * as S from "./GroupCard.styles";
+import * as S from "./Card.styles";
 import {
   GradeRounded as GradeRoundedIcon,
   Edit as EditIcon,
@@ -12,9 +12,10 @@ import { Link } from "react-router-dom";
 interface IGroupCardProps {
   group: IGroupProps;
   handleRemove(): void;
+  handleEdiT(): void;
 }
 
-const GroupCard = ({ group, handleRemove }: IGroupCardProps) => {
+const GroupCard = ({ group, handleRemove, handleEdiT }: IGroupCardProps) => {
   const { id, name, tags } = group;
 
   return (
@@ -33,9 +34,7 @@ const GroupCard = ({ group, handleRemove }: IGroupCardProps) => {
         </S.Texts>
       </S.Content>
       <S.Icons>
-        <Link to={`/group/${id}`}>
-          <EditIcon color="info" />
-        </Link>
+        <EditIcon color="info" onClick={handleEdiT} />
         <Link to={`/group/${id}`}>
           <VisibilityIcon color="info" />
         </Link>

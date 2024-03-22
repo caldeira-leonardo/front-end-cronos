@@ -1,4 +1,3 @@
-import Modal from "components/Material/Modal";
 import React from "react";
 
 interface IGroupProps {
@@ -6,11 +5,7 @@ interface IGroupProps {
 }
 
 const Group = ({ children }: IGroupProps) => {
-  return (
-    <div>
-      <Modal>aqui</Modal>
-    </div>
-  );
+  return <div>Group</div>;
 };
 
 export default Group;

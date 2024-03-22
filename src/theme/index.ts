@@ -23,9 +23,9 @@ const theme = createTheme(
       },
     },
     components: {
-      MuiTextField: { defaultProps: { size: "small" } },
+      MuiTextField: { defaultProps: { color: "secondary", size: "small" } },
       MuiFormControl: { defaultProps: { size: "small" } },
-      MuiSelect: { defaultProps: { size: "small" } },
+      MuiSelect: { defaultProps: { color: "secondary", size: "small" } },
       MuiButton: { defaultProps: { color: "secondary", variant: "contained" } },
     },
   },
