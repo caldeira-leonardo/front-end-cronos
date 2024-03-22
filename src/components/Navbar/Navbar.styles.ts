@@ -8,14 +8,16 @@ export const Wrapper = styled(Box)`
   padding: ${theme.spacing(3)} ${theme.spacing(10)};
 
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   position: relative;
 
-  img {
-    position: absolute;
-    left: ${theme.spacing(10)};
-    cursor: pointer;
+  background-color: ${theme.palette.gradient.middle};
+
+  a {
+    img {
+      cursor: pointer;
+    }
   }
 `;
 

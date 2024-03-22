@@ -1,6 +1,5 @@
 import * as React from "react";
 import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
 import * as S from "./Modal.style";
 
 const Modal = ({ children }: { children: React.ReactNode }) => {

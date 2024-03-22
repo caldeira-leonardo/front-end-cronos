@@ -18,7 +18,7 @@ const theme = createTheme(
 
       gradient: {
         start: "#f0f0f0",
-        middle: "#f0f0f0",
+        middle: "#067EB340",
         end: "#007aff",
       },
     },

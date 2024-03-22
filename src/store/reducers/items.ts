@@ -5,9 +5,11 @@ const initialState = "[]";
 const itemsSlice = createSlice({
   name: "groups",
   initialState,
-  reducers: {},
+  reducers: {
+    newItem: () => {},
+  },
 });
 
-export const {} = itemsSlice.actions;
+export const { newItem } = itemsSlice.actions;
 
 export default itemsSlice.reducer;

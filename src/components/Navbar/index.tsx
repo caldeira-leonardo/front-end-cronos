@@ -1,23 +1,14 @@
 import React from "react";
 import * as S from "./Navbar.styles";
-import { Button } from "@mui/material";
 import logo from "assets/logo.svg";
-import { headerOptions } from "utils/mocked";
+import { Link } from "react-router-dom";
 
-interface INavbarProps {
-  children?: React.ReactNode;
-}
-
-const Navbar = ({ children }: INavbarProps) => {
+const Navbar = () => {
   return (
     <S.Wrapper>
-      <img src={logo} alt="logo" />
-
-      <S.PageLinks>
-        {headerOptions.map((link) => (
-          <Button key={link.key}>{link.label}</Button>
-        ))}
-      </S.PageLinks>
+      <Link to="/">
+        <img src={logo} alt="logo" />
+      </Link>
     </S.Wrapper>
   );
 };
