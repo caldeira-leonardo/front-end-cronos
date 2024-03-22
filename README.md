@@ -55,7 +55,7 @@ Para a integração entre Frontend e Backend foi utilizado o axios por ser uma b
 
 - [public](./public)
 - [src](./src) - Raiz do projeto
-  - [@types](./src/@types) - Typagens de modulos
+  - [@types](./src/@types) - Tipagens de modulos
   - [assets](./src/assets) - Imagens da aplicação
   - [common](./src/common) - Arquivos comuns da aplicação
   - [components](./src/components) - Componentes reutilizaveis da aplicação
